@@ -1,0 +1,116 @@
+
+## Property Listing Application - Project Documentation
+
+### ✅ Objective:
+To build a simple Property Listing Application using React.js to demonstrate frontend development skills, with user authentication and property interaction features.
+
+---
+
+### 🔧 Tech Stack:
+- **Frontend**: React.js (Functional Components, Hooks)
+- **Routing**: React Router DOM
+- **State Management**: Redux, React Hooks (`useState`, `useEffect`)
+- **Backend**: Node.js with Express (for API) *(optional)*
+- **Database**:  MySQL
+- **Authentication**: JWT (JSON Web Token)
+- **Styling**: Bootstrap / Tailwind CSS
+
+---
+
+
+### 📁 Folder Structure:
+src/
+├── components/
+│   ├── Home.js
+│   ├── PropertyCard.js
+│   ├── PropertyDetails.js
+│   ├── Favorites.js
+│   └── Navbar.js
+│
+├── pages/
+│   ├── Favorites.js
+│  
+│
+├── redux/
+│   ├── store.js
+│   ├── authSlice.js
+│   └── favoritesSlice.js
+│
+├── services/
+│   └── api.js
+│
+├── App.js
+├── index.js
+└── Home.css|Home.js
+
+---
+
+### 🏠 1. Home Page (Property List):
+- Displays property cards using data from API or dummy JSON.
+- Each card includes:
+  - Name
+  - Location
+  - Price
+  - Image
+  - "View Details" button linking to property detail route
+
+---
+
+### 🧭 2. Property Detail Page:
+- Navigated using `react-router-dom`
+- Shows:
+  - Full description
+  - Image gallery (2-3 images minimum)
+  - Price
+  - Location
+
+---
+
+### 🔍 3. Search & Filter:
+- Search input filters properties by name or location.
+- Optional: Dropdown filter by price range (e.g., $0-$500k, $500k-$1M, etc.)
+
+---
+
+### ❤️ 4. Favorite Functionality:
+- Users can mark/unmark favorites.
+- Favorite status is saved in `localStorage`.
+- Separate "Favorites" page displays all marked properties.
+- Redux used to manage favorite state (with fallback from localStorage).
+
+---
+
+### 🔐 5. User Authentication:
+- Register/Login via JWT authentication.
+- User info saved in MongoDB/MySQL.
+- Store JWT in localStorage.
+- Secure routes (like Favorites/Profile) using protected route logic.
+
+---
+
+### 🛠️ 6. Technical Implementation:
+- React Hooks: `useState`, `useEffect` used throughout the app.
+- Redux: for authentication and favorites state.
+- `react-router-dom`: handles routing between Home, Details, Favorites, Login, Signup.
+- LocalStorage: used for token storage and favorite persistence.
+- Axios/Fetch: for API requests (properties, user login/register).
+
+---
+
+### 🔐 Protected Routes:
+- Favorites/Profile only accessible if user is logged in.
+- Redirect to login if not authenticated.
+
+---
+
+### 🔄 Future Enhancements (Optional):
+- Image carousel in details page
+- Pagination for home list
+- Backend: add Express server
+- Deploy to Netlify/Vercel + MongoDB Atlas or MySQL
+
+---
+
+**Author:** Moumita Ahamed
+**Project Type:** Full-stack React Application
+**Date:** April 2025
